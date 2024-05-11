@@ -1,9 +1,14 @@
+import uvicorn
 from fastapi import FastAPI
-import uvicorn 
 
-app = FastAPI
+app = FastAPI()
 
-@app.get("/")
+@app.get('/')
 def read_home():
-    return {"Hello" : "World"}
+    return {"read_me": "world"}
+
+def start():
+    uvicorn.run("todos.main:app" , host="127.0.0.5", port="9004")
+
+
 

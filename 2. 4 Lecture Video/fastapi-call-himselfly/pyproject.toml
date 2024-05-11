@@ -7,6 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastapi = "^0.111.0"
+sql = "^2022.4.0"
+unicorn = "^2.0.1.post1"
+uvicorn = "^0.29.0"
+
+[tool.poetry.scripts]
+dev="todos.main:start"
+
 
 
 [build-system]
